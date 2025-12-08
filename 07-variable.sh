@@ -1,5 +1,5 @@
 #!/bin/bash
 
-DATE=($date)
+DATE=$(date)
 
-echo "date is executed:$DATE"
+echo "date is executed:"$DATE
