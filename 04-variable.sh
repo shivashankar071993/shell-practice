@@ -1,7 +1,7 @@
 #!bin/bash
 
-Person1=$1
-Person2=$2
+Person1=$3
+Person2=$4
 
 echo "$Person1:Welcome to alaska $Person2"
 echo "$Person2:Thankyou $Person1,Finally not in Zoom webinar"
