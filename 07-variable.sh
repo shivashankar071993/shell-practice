@@ -2,4 +2,4 @@
 
 DATE=$(date)
 
-echo "date is executed:$DATE"
+echo "date is executed:" $DATE
