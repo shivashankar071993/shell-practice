@@ -1,5 +1,8 @@
 #!bin/bash
 
+#CODE started 
+$(date) &>>$LOG_FILE
+
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
@@ -32,8 +35,6 @@ VALIDATE(){
     fi
 }
 
-#CODE started 
-$(date) &>>$LOG_FILE
 ##installing mysql
 dnf list installed mysql &>>$LOG_FILE
 # installed if it is not found
