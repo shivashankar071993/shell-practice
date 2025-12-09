@@ -6,7 +6,7 @@ if [ $USER -ne 0 ] ; then
     echo "Please select the root user otherwise installation will not work"
 else 
 
-dnf install mysqld
+dnf install mysqld -y
 
 elif [ $? -ne 0 ] ; then 
 
