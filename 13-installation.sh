@@ -1,6 +1,6 @@
 #!/bin/bash
 
-USERID=(id -u)
+USERID=$(id -u)
 
 if [ ($USERID) ne 0 ] ; then
 echo " Please run with root user else will not work"
