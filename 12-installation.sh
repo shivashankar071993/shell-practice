@@ -4,16 +4,16 @@ USER=$(id -u)
 
 if [ $USER -ne 0 ] ; then 
     echo "Please select the root user otherwise installation will not work"
-else 
+fi  
 
 dnf install mysqld -y
 
-elif [ $? -ne 0 ] ; then 
+if  [ $? -ne 0 ] ; then 
 
-echo "installation successfull"
+echo "installion failed check logs"
 
 else 
 
-echo "instalation failure"
+echo "instalation successful"
 
 fi
