@@ -11,7 +11,7 @@ N="\e[0m"
 USERID=$(id -u)
 
 LOGS_FOLDER="/var/log/shell-script"
-SCRIPT_NAME=$(echo $0| cut -d "." -F1 )
+SCRIPT_NAME=$(echo $0| cut -d "." -f1 )
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 
 mkdir -p $LOGS_FOLDER
