@@ -35,7 +35,7 @@ VALIDATE $? "MYSQL"
 else 
     echo -e "MYSQL Is already installed...$G Skipping $N"
 
-
+fi
 ###installing nginx
 dnf list installed nginx
 
@@ -44,7 +44,7 @@ dnf install nginx -y
 VALIDATE $? "nginx"
 else 
     echo -e "NGINX Is already installed...$G Skipping $N"
-
+fi
 
 ###installing python
 dnf list installed python3
@@ -54,5 +54,5 @@ dnf install python3 -y
 VALIDATE $? "python"
 else 
     echo -e "Python Is already installed...$G Skipping $N"
-
+fi
 #Coded ended
