@@ -3,12 +3,15 @@
 USER=$(id -u)
 
 if [ $USER -ne 0 ] ; then 
-    echo "Please select the root user otherwise installation will not work"
+  
+  echo "Please select the root user otherwise installation will not work"
+
+  exit 1 #failure code 1
 fi  
 
-exit 1 #failure code i
 
- dnf install mysql -y
+
+ dnf install mysql  -y
 
 if  [ $? -ne 0 ] ; then 
 
