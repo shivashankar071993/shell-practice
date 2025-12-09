@@ -9,7 +9,7 @@ fi
 
 VALIDATE(){
 
-    if [ $1 -ne 0 ] then 
+    if [ $1 -ne 0 ] ;then 
          echo "installation $2 failure"
         exit 1
     else
