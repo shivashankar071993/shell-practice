@@ -6,7 +6,7 @@ if [ $USER -ne 0 ] ; then
     echo "Please select the root user otherwise installation will not work"
 fi  
 
-#exit 1 #failure code i
+exit 1 #failure code i
 
 dnf install mysqld -y
 
