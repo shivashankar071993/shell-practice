@@ -8,7 +8,7 @@ fi
 
 exit 1 #failure code i
 
-dnf install mysqld -y
+sudo dnf install mysqld -y
 
 if  [ $? -ne 0 ] ; then 
 
