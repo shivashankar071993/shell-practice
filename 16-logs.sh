@@ -1,7 +1,7 @@
 #!bin/bash
 
 #CODE started 
-$(date) &>>$LOG_FILE
+
 
 R="\e[31m"
 G="\e[32m"
@@ -18,6 +18,8 @@ mkdir -p $LOGS_FOLDER
 echo "SCRIPT started executing $(date)"
 
 USERID=$(id -u)
+
+$(date) &>>$LOG_FILE
 
 if [ $USERID -ne 0 ] ; then
 echo " Please run with root user else will not work"
