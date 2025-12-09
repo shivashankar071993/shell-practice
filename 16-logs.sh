@@ -19,7 +19,7 @@ echo "SCRIPT started executing $(date)"
 
 USERID=$(id -u)
 
-echo "$(date)" 
+$(date) &>>$LOG_FILE
 
 if [ $USERID -ne 0 ] ; then
 echo " Please run with root user else will not work"
