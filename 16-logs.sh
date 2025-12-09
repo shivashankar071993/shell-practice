@@ -15,7 +15,7 @@ SCRIPT_NAME=$(echo $0| cut -d "." -f1 )
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 
 mkdir -p $LOGS_FOLDER
-echo "SCRIPT started executing $(date)"
+echo "SCRIPT started executing $(date)" | tee -a $LOG_FILE 
 
 USERID=$(id -u)
 
@@ -45,7 +45,7 @@ if [ $? -ne 0 ]; then
 dnf install mysql -y &>>$LOG_FILE
 VALIDATE $? "MYSQL"
 else 
-    echo -e "MYSQL Is already installed...$G Skipping $N"
+    echo -e "MYSQL Is already installed...$G Skipping $N" | tee -a $LOG_FILE
 
 fi
 ###installing nginx
@@ -55,7 +55,7 @@ if [ $? -ne 0 ]; then
 dnf install nginx -y &>>$LOG_FILE
 VALIDATE $? "nginx"
 else 
-    echo -e "NGINX Is already installed...$G Skipping $N"
+    echo -e "NGINX Is already installed...$G Skipping $N" | tee -a $LOG_FILE
 fi
 
 ###installing python
@@ -65,6 +65,6 @@ if [ $? -ne 0 ]; then
 dnf install python3 -y  &>>$LOG_FILE
 VALIDATE $? "python"
 else 
-    echo -e "Python Is already installed...$G Skipping $N"
+    echo -e "Python Is already installed...$G Skipping $N" | tee -a $LOG_FILE
 fi
 #Coded ended
