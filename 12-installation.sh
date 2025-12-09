@@ -11,7 +11,32 @@ fi
 
 
 
- dnf install mysqld  -y
+ dnf install mysql  -y
+
+if  [ $? -ne 0 ] ; then 
+
+echo "installion failed check logs"
+
+else 
+
+echo "instalation successful"
+
+fi
+
+dnf install nginx   -y
+
+if  [ $? -ne 0 ] ; then 
+
+echo "installion failed check logs"
+
+else 
+
+echo "instalation successful"
+
+fi
+
+
+dnf install mongodb-mongosh    -y
 
 if  [ $? -ne 0 ] ; then 
 
