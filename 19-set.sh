@@ -4,7 +4,7 @@ set -e
 
 error() {
 
-    echo "there is an error"
+    echo "there is an error" $LINENO" command is $BASH_COMMAND"
 
 }
 
