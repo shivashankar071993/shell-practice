@@ -51,7 +51,7 @@ fi
 
 FILES=$(find $SOURCE_DIR -name "*.log" -type f -mtime +7)
 
-if [! -z "${FILES}" ]; then 
+if [ ! -z "${FILES}" ]; then 
     echo "files found"
 else 
     echo -e "No files to archive $Y Skipping $N"
