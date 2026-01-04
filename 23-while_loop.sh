@@ -4,7 +4,7 @@ count=5
 
 echo "starting countdown"
 
-while [$count gt 5 ]
+while [ $count gt 5 ]
 
 do 
     echo "time left" $count
