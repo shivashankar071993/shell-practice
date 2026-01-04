@@ -49,10 +49,16 @@ if [ ! -d $DEST_DIR ]; then
 fi
 
 
-FILES=$(find $SOURCE_DIR -name "*.log" -type f -mtime +7)
+FILES=$(find $SOURCE_DIR -name "*.log" -type f -mtime +$DAYS)
 
 if [ ! -z "${FILES}" ]; then 
-    echo "files found"
+    echo "files found" $FILES
+
+   TIMESTAMP=$(date +%F-%H-%M)
+   ZIP_FILE_NAME="$DEST_DIR/app_logs_$TIMESTAMP.zip"
+   echo "ZIP file name :$ZIP_FILE_NAME"
+   echo $FILES | zip -@ -j "$ZIP_FILE_NAME"
+
 else 
     echo -e "No files to archive $Y Skipping $N"
 fi
