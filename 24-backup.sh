@@ -27,7 +27,10 @@ fi
 USAGE() {
 
     echo "USAGE:sudo sh  24-backup.sh <SOURCE_DIR> <DEST_DIR> <DAYS>[Optional ,default 14 days ]"
+    exit 1
 }
 
 if [ $# lt 2 ]; then 
     USAGE
+
+fi
