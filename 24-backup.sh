@@ -16,6 +16,7 @@ SCRIPT_NAME=$(echo $0| cut -d "." -f1 )
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 SOURCE_DIR=$1
 DEST_DIR=$2
+Days=${3:-14}
 
 
 mkdir -p $LOGS_FOLDER
@@ -48,3 +49,10 @@ if [ ! -d $DEST_DIR ]; then
 fi
 
 
+FILES=$(find $SOURCE_DIR -name "*.log" -type f -mtime +7)
+
+if [! -z "${FILES}" ]; then 
+    echo "files found"
+else 
+    echo -e "No files to archive $Y Skipping $N"
+fi
