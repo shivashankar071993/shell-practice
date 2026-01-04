@@ -59,6 +59,24 @@ if [ ! -z "${FILES}" ]; then
    echo "ZIP file name :$ZIP_FILE_NAME"
    find $SOURCE_DIR -name "*.log" -type f -mtime +$Days | zip  "$ZIP_FILE_NAME"
 
+   if [ -f $ZIP_FILE_NAME ]  ; then
+   echo "zipped the files"
+
+     while IFS= read -r filepath
+
+        do 
+
+        echo "DELETING the files:" $filepath
+        rm -rf $filepath
+
+        echo "deleted the files:" $filepath
+
+        done <<< $FILES
+
+     
+    else 
+     echo    "Zipping failed please check" 
+    fi
 else 
     echo -e "No files to archive $Y Skipping $N"
 fi
