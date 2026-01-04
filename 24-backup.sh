@@ -49,7 +49,7 @@ if [ ! -d $DEST_DIR ]; then
 fi
 
 
-FILES=$(find $SOURCE_DIR -name "*.log" -type f -mtime +$DAYS)
+FILES=$(find $SOURCE_DIR -name "*.log" -type f -mtime +$Days)
 
 if [ ! -z "${FILES}" ]; then 
     echo "files found" $FILES
