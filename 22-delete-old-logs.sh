@@ -17,9 +17,9 @@ LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 mkdir -p $LOGS_FOLDER
 echo "SCRIPT started executing $(date)" | tee -a $LOG_FILE 
 
-SOURCE_DIR=/home/ec2-user/app-logs
+SOURCE_DIR=/home/ec2-user/app_logs
 
-if [ ! -d $SOURCE_DIR]; then
+if [ ! -d $SOURCE_DIR  ]; then
 
 echo  -e "ERROR:$SOURCE_DIR does not exits"
 exit 1
